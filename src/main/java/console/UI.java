@@ -59,6 +59,7 @@ public class UI {
         String nume = scanner.nextLine();
 
         System.out.println("Introduceti grupa studentului: ");
+        //TODO: try-catch here
         int grupa = scanner.nextInt();
 
         if (service.saveStudent(id, nume, grupa) != 0) {

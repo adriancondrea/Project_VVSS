@@ -49,6 +49,7 @@ public class Service {
             return -1;
         }
         else {
+            //TODO: extract grade computing in separate method
             int deadline = temaXmlRepo.findOne(idTema).getDeadline();
 
             if (predata - deadline > 2) {
@@ -108,8 +109,11 @@ public class Service {
         Tema tema = temaXmlRepo.findOne(id);
 
         if (tema != null) {
+            // TODO: why do we need current week here? We should only noWeeks to tema.deadline and check it does not
+            // overstep the number of weeks in the year
             LocalDate date = LocalDate.now();
             WeekFields weekFields = WeekFields.of(Locale.getDefault());
+            //TODO: currentDeadline = tema.getDeadline()
             int currentWeek = date.get(weekFields.weekOfWeekBasedYear());
 
             if (currentWeek >= 39) {

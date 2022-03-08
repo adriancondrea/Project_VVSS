@@ -6,6 +6,7 @@ public class Student implements HasID<String> {
     private String idStudent;
     private String nume;
     private int grupa;
+    //TODO: Email is missing
 
     public Student(String idStudent, String nume, int grupa) {
         this.idStudent = idStudent;

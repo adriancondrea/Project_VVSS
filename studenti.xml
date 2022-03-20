@@ -3,21 +3,26 @@
     <student ID="55">
         <Nume>test55</Nume>
         <Grupa>932</Grupa>
+        <Email>test@mail.com</Email>
     </student>
     <student ID="1">
         <Nume>Anamaria</Nume>
         <Grupa>221</Grupa>
+        <Email>test@mail.com</Email>
     </student>
     <student ID="2">
         <Nume>Maria</Nume>
         <Grupa>222</Grupa>
+        <Email>test@mail.com</Email>
     </student>
     <student ID="4">
         <Nume>Ion</Nume>
         <Grupa>227</Grupa>
+        <Email>test@mail.com</Email>
     </student>
     <student ID="6600">
         <Nume>teststudent</Nume>
         <Grupa>923</Grupa>
+        <Email>test@mail.com</Email>
     </student>
 </Entitati>

@@ -62,7 +62,11 @@ public class UI {
         //TODO: try-catch here
         int grupa = scanner.nextInt();
 
-        if (service.saveStudent(id, nume, grupa) != 0) {
+        System.out.println("Introduceti emailul studentului: ");
+        //TODO: try-catch here
+        String email = scanner.nextLine();
+
+        if (service.saveStudent(id, nume, grupa, email) != 0) {
             System.out.println("Student adaugat cu succes! \n");
         }
         else {
@@ -166,7 +170,10 @@ public class UI {
         System.out.println("Introduceti noua grupa a studentului: ");
         int grupaNoua = scanner.nextInt();
 
-        if (service.updateStudent(id, numeNou, grupaNoua) != 0) {
+        System.out.println("Introduceti noul email al studentului: ");
+        String emailNou = scanner.nextLine();
+
+        if (service.updateStudent(id, numeNou, grupaNoua, emailNou) != 0) {
             System.out.println("Student actualizat cu succes! \n");
         }
         else {

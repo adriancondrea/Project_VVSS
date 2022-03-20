@@ -1,4 +1,5 @@
 package validation;
+
 import domain.Student;
 
 public class StudentValidator implements Validator<Student> {
@@ -9,8 +10,16 @@ public class StudentValidator implements Validator<Student> {
         if (student.getNume() == null || student.getNume().equals("")) {
             throw new ValidationException("Nume invalid! \n");
         }
-        //todo: more elaborate group check (ex:199 - valid group)
+
+        if (student.getEmail() == null || student.getEmail().equals("")) {
+            throw new ValidationException("Email invalid! \n");
+        }
+
         if (student.getGrupa() <= 110 || student.getGrupa() >= 938) {
+            throw new ValidationException("Grupa invalida! \n");
+        }
+
+        if ((student.getGrupa() / 10) % 10 < 1 || (student.getGrupa() / 10) % 10 > 3) {
             throw new ValidationException("Grupa invalida! \n");
         }
     }

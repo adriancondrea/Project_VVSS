@@ -208,40 +208,18 @@ public class UI {
             System.out.println("Introduceti comanda: ");
             cmd = scanner.nextInt();
 
-            switch(cmd) {
-                case 11:
-                    uiPrintAllStudents();
-                    break;
-                case 12:
-                    uiPrintAllTeme();
-                    break;
-                case 13:
-                    uiPrintAllNote();
-                    break;
-                case 21:
-                    uiSaveStudent();
-                    break;
-                case 22:
-                    uiSaveTema();
-                    break;
-                case 23:
-                    uiSaveNota();
-                    break;
-                case 31:
-                    uiDeleteStudent();
-                    break;
-                case 32:
-                    uiDeleteTema();
-                    break;
-                case 4:
-                    uiUpdateStudent();
-                    break;
-                case 5:
-                    uiExtendDeadline();
-                    break;
-                case 0:
-                    cmd = 0;
-                    break;
+            switch (cmd) {
+                case 11 -> uiPrintAllStudents();
+                case 12 -> uiPrintAllTeme();
+                case 13 -> uiPrintAllNote();
+                case 21 -> uiSaveStudent();
+                case 22 -> uiSaveTema();
+                case 23 -> uiSaveNota();
+                case 31 -> uiDeleteStudent();
+                case 32 -> uiDeleteTema();
+                case 4 -> uiUpdateStudent();
+                case 5 -> uiExtendDeadline();
+                case 0 -> {}
             }
         }
     }

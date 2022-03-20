@@ -27,6 +27,29 @@ class StudentValidatorTest {
 
         outOfBoundsStudentGroup_throwsException();
         invalidStudentGroupSecondDigit_throwsException();
+        invalidStudentGroupLastDigit_throwsException();
+
+        validStudent_throwsNoException();
+    }
+
+    private void invalidStudentGroupLastDigit_throwsException() {
+        Student student = new Student("1", "test_name", 930, "test@mail.com");
+        try {
+            this.validator.validate(student);
+            assert false;
+        } catch (Exception e) {
+            assert true;
+        }
+    }
+
+    private void validStudent_throwsNoException() {
+        Student student = new Student("1", "test_name", 932, "test@mail.com");
+        try {
+            this.validator.validate(student);
+            assert true;
+        } catch (Exception e) {
+            assert false;
+        }
     }
 
     @Test

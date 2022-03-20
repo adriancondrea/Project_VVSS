@@ -22,6 +22,10 @@ public class StudentValidator implements Validator<Student> {
         if ((student.getGrupa() / 10) % 10 < 1 || (student.getGrupa() / 10) % 10 > 3) {
             throw new ValidationException("Grupa invalida! \n");
         }
+
+        if((student.getGrupa() % 10 < 1)){
+            throw new ValidationException("Grupa invalida! \n");
+        }
     }
 }
 

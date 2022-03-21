@@ -35,7 +35,7 @@ class StudentRepositoryTest {
 
     private void saveValidStudent_addsStudentToRepository() {
         Student student = new Student("1", "test_name", 932, "test@mail.com");
-        assert(studentRepository.save(student).equals(student));
+        assert(studentRepository.save(student) == null);
 
         AtomicInteger numberOfStudents = new AtomicInteger();
         studentRepository.findAll().forEach(e -> numberOfStudents.addAndGet(1));

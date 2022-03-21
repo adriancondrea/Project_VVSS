@@ -33,7 +33,7 @@ class StudentValidatorTest {
     }
 
     @Test
-    private void invalidStudentGroupLastDigit_throwsException() {
+    void invalidStudentGroupLastDigit_throwsException() {
         Student student = new Student("1", "test_name", 930, "test@mail.com");
         try {
             this.validator.validate(student);
@@ -44,7 +44,7 @@ class StudentValidatorTest {
     }
 
     @Test
-    private void validStudent_throwsNoException() {
+    void validStudent_throwsNoException() {
         Student student = new Student("1", "test_name", 932, "test@mail.com");
         try {
             this.validator.validate(student);

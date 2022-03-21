@@ -32,6 +32,7 @@ class StudentValidatorTest {
         validStudent_throwsNoException();
     }
 
+    @Test
     private void invalidStudentGroupLastDigit_throwsException() {
         Student student = new Student("1", "test_name", 930, "test@mail.com");
         try {
@@ -42,6 +43,7 @@ class StudentValidatorTest {
         }
     }
 
+    @Test
     private void validStudent_throwsNoException() {
         Student student = new Student("1", "test_name", 932, "test@mail.com");
         try {

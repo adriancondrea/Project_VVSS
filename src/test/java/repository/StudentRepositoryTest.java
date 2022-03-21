@@ -22,6 +22,7 @@ class StudentRepositoryTest {
         saveDuplicateIdStudent_doesNotAddStudentToRepository();
     }
 
+    @Test
     private void saveDuplicateIdStudent_doesNotAddStudentToRepository() {
         Student student = new Student("1", "test_name", 932, "test@mail.com");
         Student student2 = new Student("1", "second_student", 832, "student2@mail.com");
@@ -33,6 +34,7 @@ class StudentRepositoryTest {
         assert(numberOfStudents.get() == 1);
     }
 
+    @Test
     private void saveValidStudent_addsStudentToRepository() {
         Student student = new Student("1", "test_name", 932, "test@mail.com");
         assert(studentRepository.save(student) == null);

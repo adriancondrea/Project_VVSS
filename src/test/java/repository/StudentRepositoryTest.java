@@ -26,6 +26,8 @@ class StudentRepositoryTest {
     void saveDuplicateIdStudent_doesNotAddStudentToRepository() {
         Student student = new Student("1", "test_name", 932, "test@mail.com");
         Student student2 = new Student("1", "second_student", 832, "student2@mail.com");
+
+        studentRepository.save(student);
         assert(studentRepository.save(student2).equals(student));
 
         AtomicInteger numberOfStudents = new AtomicInteger();

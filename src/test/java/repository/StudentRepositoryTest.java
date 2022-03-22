@@ -46,4 +46,9 @@ class StudentRepositoryTest {
 
         assert(numberOfStudents.get() == 1);
     }
+
+    @Test
+    void WBTsaveStudent_addsStudentToRepository(){
+
+    }
 }

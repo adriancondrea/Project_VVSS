@@ -9,10 +9,10 @@ import java.util.Locale;
 
 public class Service {
     private StudentXMLRepository studentXmlRepo;
-    private TemaXMLRepository temaXmlRepo;
+    private TemaRepository temaXmlRepo;
     private NotaXMLRepository notaXmlRepo;
 
-    public Service(StudentXMLRepository studentXmlRepo, TemaXMLRepository temaXmlRepo, NotaXMLRepository notaXmlRepo) {
+    public Service(StudentXMLRepository studentXmlRepo, TemaRepository temaXmlRepo, NotaXMLRepository notaXmlRepo) {
         this.studentXmlRepo = studentXmlRepo;
         this.temaXmlRepo = temaXmlRepo;
         this.notaXmlRepo = notaXmlRepo;

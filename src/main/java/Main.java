@@ -16,7 +16,9 @@ public class Main {
         TemaXMLRepository fileRepository2 = new TemaXMLRepository(temaValidator, "teme.xml");
         NotaXMLRepository fileRepository3 = new NotaXMLRepository(notaValidator, "note.xml");
 
-        Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
+        TemaRepository temaRepository = new TemaRepository(new TemaValidator());
+
+        Service service = new Service(fileRepository1, temaRepository, fileRepository3);
         UI consola = new UI(service);
         consola.run();
 

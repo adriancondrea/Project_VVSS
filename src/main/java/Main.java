@@ -17,8 +17,10 @@ public class Main {
         NotaXMLRepository fileRepository3 = new NotaXMLRepository(notaValidator, "note.xml");
 
         TemaRepository temaRepository = new TemaRepository(new TemaValidator());
+        StudentRepository studentRepository = new StudentRepository(new StudentValidator());
+        NotaRepository notaRepository = new NotaRepository(new NotaValidator());
 
-        Service service = new Service(fileRepository1, temaRepository, fileRepository3);
+        Service service = new Service(studentRepository, temaRepository, notaRepository);
         UI consola = new UI(service);
         consola.run();
 

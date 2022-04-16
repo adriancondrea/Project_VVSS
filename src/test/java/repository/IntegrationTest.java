@@ -23,39 +23,108 @@ public class IntegrationTest {
     NotaRepository notaRepository = new NotaRepository(notaValidator);
 
     @Test
-    void allIntegration (){
-        addStudent();
-        addTema();
-        addGrade();
-    }
-    @Test
-    void addStudent(){
+    void allIntegration() {
         Student student = new Student("1", "test_name", 932, "test@mail.com");
-        assert(studentRepository.save(student) == null);
+        assert (studentRepository.save(student) == null);
 
         AtomicInteger numberOfStudents = new AtomicInteger();
         studentRepository.findAll().forEach(e -> numberOfStudents.addAndGet(1));
 
-        assert(numberOfStudents.get() == 1);
-    }
-    @Test
-    void addGrade(){
-        Nota nota = new Nota(new Pair<String, String>("1","1"), 10, 14, "all good");
-        assert(notaRepository.save(nota) == null);
+        assert (numberOfStudents.get() == 1);
+
+        Nota nota = new Nota(new Pair<String, String>("1", "1"), 10, 14, "all good");
+        assert (notaRepository.save(nota) == null);
 
         AtomicInteger numberOfNote = new AtomicInteger();
         notaRepository.findAll().forEach(e -> numberOfNote.addAndGet(1));
 
-        assert(numberOfNote.get() == 1);
-    }
-    @Test
-    void addTema(){
+        assert (numberOfNote.get() == 1);
+
         Tema tema = new Tema("1", "test_description", 14, 1);
-        assert(temaRepository.save(tema) == null);
+        assert (temaRepository.save(tema) == null);
 
         AtomicInteger numberOfTeme = new AtomicInteger();
         temaRepository.findAll().forEach(e -> numberOfTeme.addAndGet(1));
 
-        assert(numberOfTeme.get() == 1);
+        assert (numberOfTeme.get() == 1);
+    }
+
+    @Test
+    void addStudent() {
+        Student student = new Student("1", "test_name", 932, "test@mail.com");
+        assert (studentRepository.save(student) == null);
+
+        AtomicInteger numberOfStudents = new AtomicInteger();
+        studentRepository.findAll().forEach(e -> numberOfStudents.addAndGet(1));
+
+        assert (numberOfStudents.get() == 1);
+    }
+
+    @Test
+    void addGrade() {
+        Nota nota = new Nota(new Pair<String, String>("1", "1"), 10, 14, "all good");
+        assert (notaRepository.save(nota) == null);
+
+        AtomicInteger numberOfNote = new AtomicInteger();
+        notaRepository.findAll().forEach(e -> numberOfNote.addAndGet(1));
+
+        assert (numberOfNote.get() == 1);
+    }
+
+    @Test
+    void addTema() {
+        Tema tema = new Tema("1", "test_description", 14, 1);
+        assert (temaRepository.save(tema) == null);
+
+        AtomicInteger numberOfTeme = new AtomicInteger();
+        temaRepository.findAll().forEach(e -> numberOfTeme.addAndGet(1));
+
+        assert (numberOfTeme.get() == 1);
+    }
+
+    @Test
+    void saveValidStudentAndAssignemnt_addStudentAndAssignemt() {
+        Student student = new Student("1", "test_name", 932, "test@mail.com");
+        assert (studentRepository.save(student) == null);
+
+        AtomicInteger numberOfStudents = new AtomicInteger();
+        studentRepository.findAll().forEach(e -> numberOfStudents.addAndGet(1));
+
+        assert (numberOfStudents.get() == 1);
+
+        Tema tema = new Tema("1", "test_description", 14, 1);
+        assert (temaRepository.save(tema) == null);
+
+        AtomicInteger numberOfTeme = new AtomicInteger();
+        temaRepository.findAll().forEach(e -> numberOfTeme.addAndGet(1));
+
+        assert (numberOfTeme.get() == 1);
+    }
+
+    @Test
+    void saveValidStudentAndAssignemntAndGrade_addStudentAndAssignemtAndGrade() {
+        Student student = new Student("1", "test_name", 932, "test@mail.com");
+        assert (studentRepository.save(student) == null);
+
+        AtomicInteger numberOfStudents = new AtomicInteger();
+        studentRepository.findAll().forEach(e -> numberOfStudents.addAndGet(1));
+
+        assert (numberOfStudents.get() == 1);
+
+        Tema tema = new Tema("1", "test_description", 14, 1);
+        assert (temaRepository.save(tema) == null);
+
+        AtomicInteger numberOfTeme = new AtomicInteger();
+        temaRepository.findAll().forEach(e -> numberOfTeme.addAndGet(1));
+
+        assert (numberOfTeme.get() == 1);
+
+        Nota nota = new Nota(new Pair<String, String>("1", "1"), 10, 14, "all good");
+        assert (notaRepository.save(nota) == null);
+
+        AtomicInteger numberOfNote = new AtomicInteger();
+        notaRepository.findAll().forEach(e -> numberOfNote.addAndGet(1));
+
+        assert (numberOfNote.get() == 1);
     }
 }

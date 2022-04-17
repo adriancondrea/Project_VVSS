@@ -61,6 +61,7 @@ public class UI {
         System.out.println("Introduceti grupa studentului: ");
         //TODO: try-catch here
         int grupa = scanner.nextInt();
+        scanner.nextLine();
 
         System.out.println("Introduceti emailul studentului: ");
         //TODO: try-catch here
